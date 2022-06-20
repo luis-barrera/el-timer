@@ -8,6 +8,7 @@ document.querySelector('#btn-stop').addEventListener('click', initRelax);
 
 var timerInterval;
 
+// TODO: mover los demás elementos a variables
 var elementTimer = document.querySelector('#main #timer');
 var totalTimer = document.querySelector('#total #timer')
 
@@ -21,6 +22,9 @@ function initWork(){
   document.getElementById('nothing-tag').style.display = 'none';
   document.getElementById('relaxing-tag').style.display = 'none';
   document.getElementById('working-tag').style.display = 'block';
+  document.getElementById('main').style.visibility = 'visible';
+  document.getElementById('main').style.opacity = '1';
+  document.getElementById('main').style.height = '40%';
 
   timerInterval = setInterval(() => {
     workTime++;

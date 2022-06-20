@@ -15,8 +15,13 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  top: 0;
+  width: 100%;
   margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /* Title */
@@ -114,13 +119,17 @@ html, body {
 
 /* -- */
 #main {
-  height: 40%;
-  width: 70%;
+  /* height: 40%; */
+  width: 60%;
   padding: 3rem;
   border: solid 2px;
   border-color: var(--working-color);
   border-radius: 20px;
   margin: 0 auto;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: visibility 0s, opacity 2s, height 0s;
 }
 
 #main #relaxing-legend{
@@ -145,9 +154,11 @@ html, body {
 }
 
 #total {
-  height: auto;
+  /* height: auto; */
   color: gray;
   margin-top: 2rem;
+  display: none;
+  transition: display 2s;
 }
 
 #total > p {
