@@ -1,29 +1,29 @@
-<h1>Temporizador de luis-barrera</h1>
+<section id="title">
+  <h1>Temporizador de luis-barrera</h1>
+</section>
 
-<section>
+<section id="info">
   <h2>Tú estás:</h2>
-  <ul>
-    <li>Trabajando</li>
-    <li>Descansando</li>
+  <ul id="status-list">
+    <li id="nothing-tag">Haciendo nada</li>
+    <li id="working-tag">Trabajando</li>
+    <li id="relaxing-tag">Descansando</li>
   </ul>
-  <button id="btn-init">Iniciar trabajo</button>
-  <button id="btn-stop">Terminar trabajo</button>
+  <div id="buttons">
+    <button id="btn-init">Iniciar trabajo</button>
+    <button id="btn-stop">Terminar trabajo</button>
+  </div>
 </section>
 
-<section id="working">
-  <p>Tiempo transcurrido en esta sesión de trabajo:</p>
-  <p id="timer">00:00:00</p>
-  <p id="format">hh:mm:ss</p>
-</section>
-
-<section id="relaxing">
-  <p>Tiempo restante de descanso:</p>
+<section id="main">
+  <p id="working-legend">Tiempo transcurrido en esta sesión de trabajo:</p>
+  <p id="relaxing-legend">Tiempo restante de descanso:</p>
   <p id="timer">00:00:00</p>
   <p id="format">hh:mm:ss</p>
 </section>
 
 <section id="total">
-  <p>Tiempo de trabajo total este día:</p>
+  <p id="tag">Tiempo de trabajo total este día:</p>
   <p id="timer">00:00:00</p>
-  <p>Tu objetivo es llegar a 08:00:00</p>
+  <p id="reco">Tu objetivo es llegar a 05:00:00</p>
 </section>

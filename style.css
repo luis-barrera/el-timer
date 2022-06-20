@@ -1,8 +1,146 @@
+/* General */
+html, body {
+  /* XXX */
+  font-size: 20px;
+  top: 0;
+  margin: 0;
+  height: 90vh;
+  background-color: #f8f7ff;
+  --working-color: green;
+  --relaxing-color: orange;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  top: 0;
+  margin: 0;
+}
+
+/* Title */
+#title {
+  height: 15%;
+}
+
+#title > h1 {
+  font-size: 2.5rem;
+  vertical-align: middle;
+  color: #FE7F2D;
+  margin: 2rem;
+}
+
+#info {
+  height: 20%;
+}
+
+#info h2 {
+  height: 100%;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  margin: 0.2rem;
+}
+
+#info ul{
+  margin: 0.2rem;
+}
+
+#info ul > li{
+  line-height: 1rem;
+  font-size: 1rem;
+}
+/* Status */
+#status-list {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+#status-list li {
+  display: inline-block;
+}
+
+#status-list #nothing-tag {
+  color: crimson;
+}
+
+#status-list #working-tag {
+  color: var(--working-color);
+  display: none;
+}
+
+#status-list #relaxing-tag {
+  color: var(--relaxing-color);
+  display: none;
+}
+
+/* Buttons */
+#buttons > button {
+  font-size: 1.5em;
+  height: 4rem;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 14px;
+  margin: 20px 0;
+}
+
+#btn-init {
+  color: white;
+  background-color: var(--working-color);
+  transition: color .5s, background-color .5s;
+}
+
+#btn-init:hover {
+  color: var(--working-color);
+  background-color: white;
+}
+
+#btn-stop {
+  color: white;
+  background-color: var(--relaxing-color);
+  transition: color .5s, background-color .5s;
+}
+
+#btn-stop:hover {
+  color: var(--relaxing-color);
+  background-color: white;
+}
+
+#btn-stop {
+  /* display: none; */
+}
+
+/* -- */
+#main {
+  height: 40%;
+}
+
+/* Sections */
+#main #relaxing-legend,
+#main #working-legend {
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+
+#main #timer {
+  height: auto;
+  font-size: 100%;
+  margin: 0 auto;
+  /* margin: 0 auto; */
+  /* font-size: 5em; */
+}
+
+#main #format {
+  margin: 0 auto;
+}
+
+#total {
+  height: auto;
+  color: gray;
+}
+
+#total > p {
+  margin: 0.5em auto;
 }
