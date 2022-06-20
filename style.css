@@ -109,12 +109,22 @@ html, body {
 }
 
 #btn-stop {
-  /* display: none; */
+  display: none;
 }
 
 /* -- */
 #main {
   height: 40%;
+  width: 70%;
+  padding: 3rem;
+  border: solid 2px;
+  border-color: var(--working-color);
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+#main #relaxing-legend{
+  display: none;
 }
 
 /* Sections */
@@ -126,19 +136,18 @@ html, body {
 
 #main #timer {
   height: auto;
-  font-size: 100%;
+  font-size: 4rem;
+  line-height: 4rem;
+  letter-spacing: 0.18em;
   margin: 0 auto;
   /* margin: 0 auto; */
   /* font-size: 5em; */
 }
 
-#main #format {
-  margin: 0 auto;
-}
-
 #total {
   height: auto;
   color: gray;
+  margin-top: 2rem;
 }
 
 #total > p {
