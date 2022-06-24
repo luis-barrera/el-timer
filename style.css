@@ -1,10 +1,13 @@
 /* General */
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   /* XXX */
-  font-size: 20px;
+  font-size: 16px;
   top: 0;
   margin: 0;
-  height: 90vh;
   background-color: #f8f7ff;
   --working-color: green;
   --relaxing-color: orange;
@@ -25,37 +28,28 @@ html, body {
 }
 
 /* Title */
-#title {
-  height: 15%;
-}
+/* #title { } */
 
 #title > h1 {
-  font-size: 2.5rem;
-  vertical-align: middle;
+  font-size: 2rem;
   color: #FE7F2D;
-  margin: 2rem;
+  margin: 0 2rem;
+  margin-bottom: 3rem;
 }
 
-#info {
-  height: 20%;
-}
+/* #info { } */
 
 #info h2 {
-  height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
   font-weight: normal;
-  margin: 0.2rem;
+  margin: 0rem;
 }
 
 #info ul{
-  margin: 0.2rem;
+  margin: 0rem;
 }
 
-#info ul > li{
-  line-height: 1rem;
-  font-size: 1rem;
-}
 /* Status */
 #status-list {
   padding: 0;
@@ -64,6 +58,8 @@ html, body {
 }
 
 #status-list li {
+  font-size: 0.8rem;
+  line-height: 1rem;
   display: inline-block;
 }
 
@@ -88,7 +84,7 @@ html, body {
   padding: 1rem 1rem;
   border: none;
   border-radius: 14px;
-  margin: 20px 0;
+  margin: 0.8rem 0;
 }
 
 #btn-init {
@@ -119,17 +115,20 @@ html, body {
 
 /* -- */
 #main {
-  /* height: 40%; */
-  width: 60%;
-  padding: 3rem;
+  width: 80%;
+  padding: 2rem;
   border: solid 2px;
   border-color: var(--working-color);
   border-radius: 20px;
-  margin: 0 auto;
+  margin: 0.5rem auto;
   visibility: hidden;
   opacity: 0;
   height: 0;
   transition: visibility 0s, opacity 2s, height 0s;
+}
+
+#main p {
+  font-size: 1rem;
 }
 
 #main #relaxing-legend{
@@ -139,18 +138,17 @@ html, body {
 /* Sections */
 #main #relaxing-legend,
 #main #working-legend {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   margin: 0 auto;
 }
 
 #main #timer {
-  height: auto;
-  font-size: 4rem;
+  font-family: 'Courier New', monospace;
+  font-size: 3rem;
+  color: var(--working-color);
   line-height: 4rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.04em;
   margin: 0 auto;
-  /* margin: 0 auto; */
-  /* font-size: 5em; */
 }
 
 #total {
@@ -164,3 +162,13 @@ html, body {
 #total > p {
   margin: 0.5em auto;
 }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { 
+  #main {
+    width: 614px;
+  }
+}
+
+/* DONE: TODO: quitar los tamaños de los divs, se supone estos toman el tamaño de los
+* elementos, mejor trabajar con flexbox */
