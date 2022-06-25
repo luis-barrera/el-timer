@@ -5,9 +5,11 @@ import './style.css';
 // Audios
 import workAudioURL from './assets/mixkit-classic-melodic-clock-strike-1058.mp3';
 import relaxAudioURL from './assets/mixkit-racing-countdown-timer-1051.mp3';
+import helpBtnURL from './assets/help.svg';
 
 // Insertamos el archivo timer.html dentro del index.html
 document.querySelector('#app').innerHTML = timerHTML;
+document.querySelector('#help-btn').setAttribute('src', helpBtnURL);
 
 // Agregamos eventos a los botones
 document.querySelector('#btn-init').addEventListener('click', initWork);
