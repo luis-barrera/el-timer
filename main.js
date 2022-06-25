@@ -2,6 +2,8 @@
 // TODO: Agregar comentarios
 import timerHTML from './timer.html?raw';
 import './style.css';
+import workAudioURL from './assets/mixkit-classic-melodic-clock-strike-1058.mp3';
+import relaxAudioURL from './assets/mixkit-racing-countdown-timer-1051.mp3';
 
 document.querySelector('#app').innerHTML = timerHTML;
 
@@ -25,6 +27,9 @@ var btn_stop = document.getElementById('btn-stop');
 
 var working_legend = document.getElementById('working-legend');
 var relaxing_legend = document.getElementById('relaxing-legend');
+
+var work_audio = new Audio(workAudioURL);
+var relax_audio = new Audio(relaxAudioURL);
 
 var work_time = 0;
 var relax_time = 0;
@@ -77,6 +82,8 @@ function initWork(){
     total_hrs = total_hrs < 10 ? '0' + total_hrs : total_hrs;
 
     total_timer.innerHTML = total_hrs + ':' + total_mins + ':' + total_secs;
+
+    if (work_time == 1500) work_audio.play()
   }, 1000);
 }
 
@@ -92,18 +99,11 @@ function initRelax(){
   relaxing_legend.style.display = 'block';
   working_legend.style.display = 'none';
 
-  main_section.style.setProperty('--acent-color', 'var(--relaxing-color)');
-
   // Calcular tiempo de descanso
   // t < 1 min
   if (work_time < 60) {
     // d = 0 min
     relax_time += 0;
-    relaxing_tag.style.display = 'none';
-    nothing_tag.style.display = 'block';
-    element_timer.innerHTML = "00:00:00";
-    work_time = 0;
-    return;
   // t < 5 min
   } else if (work_time < 300) {
     // d = 1 min
@@ -119,6 +119,14 @@ function initRelax(){
   }
 
   work_time = 0;
+  element_timer.innerHTML = "00:00:00";
+
+  if (relax_time == 0) {
+    relaxing_tag.style.display = 'none';
+    nothing_tag.style.display = 'block';
+    return;
+  }
+  main_section.style.setProperty('--acent-color', 'var(--relaxing-color)');
 
   timerInterval = setInterval(() => {
     let secs = relax_time % 60;
@@ -132,7 +140,9 @@ function initRelax(){
     element_timer.innerHTML = hrs + ':' + mins + ':' + secs;
     relax_time--;
 
+    if (relax_time == 0) relax_audio.play();
     if (relax_time <= 0) return;
+    
   }, 1000);
 }
 
