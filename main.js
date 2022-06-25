@@ -12,6 +12,8 @@ document.querySelector('#app').innerHTML = timerHTML;
 // Agregamos eventos a los botones
 document.querySelector('#btn-init').addEventListener('click', initWork);
 document.querySelector('#btn-stop').addEventListener('click', initRelax);
+document.querySelector('#close-help').addEventListener('click', closeHelp);
+document.querySelector('#help-btn').addEventListener('click', showHelp);
 
 // Interval usado en la app
 var timerInterval;
@@ -36,6 +38,11 @@ var btn_stop = document.getElementById('btn-stop');
 // Elemntos de los mensajes dentro del timer
 var working_legend = document.getElementById('working-legend');
 var relaxing_legend = document.getElementById('relaxing-legend');
+
+// Elemento ventana help
+var help_window = document.getElementById('help');
+// Botón help
+var help_button = document.getElementById('help-btn');
 
 // Objetos audios
 var work_audio = new Audio(workAudioURL);
@@ -199,6 +206,16 @@ function initRelax(){
     }
     
   }, 1000);
+}
+
+function closeHelp() {
+  help_window.style.display = 'none';
+  help_button.style.display = 'block';
+}
+
+function showHelp() {
+  help_window.style.display = 'block';
+  help_button.style.display = 'none';
 }
 
 // DONE: TODO: Cambiar botones al iniciar o terminar el timer

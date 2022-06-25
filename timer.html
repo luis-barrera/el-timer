@@ -10,8 +10,8 @@
     <li id="relaxing-tag">Descansando</li>
   </ul>
   <div id="buttons">
-    <button id="btn-init">Iniciar trabajo</button>
-    <button id="btn-stop">Terminar trabajo</button>
+    <button id="btn-init">Iniciar Trabajo</button>
+    <button id="btn-stop">Terminar Trabajo</button>
   </div>
 </section>
 
@@ -22,7 +22,25 @@
 </section>
 
 <section id="total">
-  <p id="tag">Tiempo de trabajo total este día:</p>
+  <p id="tag">Tiempo de trabajo total:</p>
   <p id="timer">00:00:00</p>
-  <p id="reco">Tu objetivo es llegar a 05:00:00</p>
 </section>
+
+<section id="help">
+  <p>Al dar en "Iniciar Trabajo" el tiempo empieza a aumentar.</p>
+  <p>Este timer funciona como un pomodoro convencional, a los 25 minutos
+  recibirás una notificación.</p>
+  <p>El tiempo no se detendrá a los 25 minutos, seguirá contando hasta que tu lo
+  detengas.</p>
+  <p>Cuando termines de trabajar, con el botón "Terminar Trabajo" se calcula el
+  tiempo de descanso a partir de tu tiempo de trabajo.</p>
+  <p>El tiempo de descanso va disminuyendo, al llegar a 0 recibirás una
+  notificación.</p>
+  <p>Puede volver a "Iniciar Trabajo" entre la sesión de descanso, el nuevo
+  tiempo de descanso se sumará al previo.</p>
+  <p>Hay un contador total al fondo. Tu objetivo es llegar a 05:00:00 de
+  trabajo.</p>
+  <p id="close-help"><u>Close this pop-up</u></p>
+</section>
+
+<img id="help-btn" src="./assets/help.svg" alt="Help Button">

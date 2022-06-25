@@ -165,6 +165,31 @@ html, body {
   margin: 0.5em auto;
 }
 
+#help {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  right: 10px;
+  width: 20rem;
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  text-align: left;
+  background-color: #f8f7fff0;
+  border: solid 2px;
+  border-radius: 20px;
+}
+
+#close-help:hover {
+  color: darkgrey;
+}
+
+#help-btn {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 10px;
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) { 
   html, body {
@@ -175,5 +200,4 @@ html, body {
   }
 }
 
-/* DONE: TODO: quitar los tamaños de los divs, se supone estos toman el tamaño de los
-* elementos, mejor trabajar con flexbox */
+/* DONE: TODO: quitar los tamaños de los divs, se supone estos toman el tamaño de los elementos, mejor trabajar con flexbox */
