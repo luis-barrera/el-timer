@@ -14,6 +14,26 @@ document.querySelector('#btn-init').addEventListener('click', initWork);
 document.querySelector('#btn-stop').addEventListener('click', initRelax);
 document.querySelector('#close-help').addEventListener('click', closeHelp);
 document.querySelector('#help-btn').addEventListener('click', showHelp);
+document.querySelector('body').addEventListener('keypress', (event) => {
+  switch (event.key) {
+    case " ":
+      if (work_time == 0) {
+        initWork();
+      } else {
+        initRelax();
+      }
+      break;
+    case "h":
+      if (help_window.style.display == 'block'){
+        closeHelp();
+      } else {
+        showHelp();
+      }
+      break;
+    default:
+      break;
+  }
+});
 
 // Interval usado en la app
 var timerInterval;
