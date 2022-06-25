@@ -14,8 +14,11 @@ document.querySelector('#btn-init').addEventListener('click', initWork);
 document.querySelector('#btn-stop').addEventListener('click', initRelax);
 document.querySelector('#close-help').addEventListener('click', closeHelp);
 document.querySelector('#help-btn').addEventListener('click', showHelp);
+// Atajos de teclado
 document.querySelector('body').addEventListener('keypress', (event) => {
+  // Leer la tecla presionada
   switch (event.key) {
+    // Espacio, para iniciar/detener Timer
     case " ":
       if (work_time == 0) {
         initWork();
@@ -23,6 +26,7 @@ document.querySelector('body').addEventListener('keypress', (event) => {
         initRelax();
       }
       break;
+    // h, para cerrar/abrir ayuda
     case "h":
       if (help_window.style.display == 'block'){
         closeHelp();
