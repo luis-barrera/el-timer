@@ -38,6 +38,8 @@ var total_time = 0;
 function initWork(){
   clearInterval(timerInterval);
 
+  element_timer.innerHTML = "00:00:00";
+
   nothing_tag.style.display = 'none';
   relaxing_tag.style.display = 'none';
   working_tag.style.display = 'block';
