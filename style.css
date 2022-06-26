@@ -1,15 +1,18 @@
 /* General */
 * {
   box-sizing: border-box;
+  --working-color: green;
+  --relaxing-color: orange;
+  --back-color: black;
+  --front-color: white;
 }
 
 html, body {
+  color: var(--front-color);
   font-size: 16px;
   top: 0;
   margin: 0;
-  background-color: #f8f7ff;
-  --working-color: green;
-  --relaxing-color: orange;
+  background-color: var(--back-color);
 }
 
 #app {
@@ -87,25 +90,25 @@ html, body {
 }
 
 #btn-init {
-  color: white;
+  color: var(--back-color);
   background-color: var(--working-color);
   transition: color .5s, background-color .5s;
 }
 
 #btn-init:hover {
   color: var(--working-color);
-  background-color: white;
+  background-color: var(--back-color);
 }
 
 #btn-stop {
-  color: white;
+  color: var(--back-color);
   background-color: var(--relaxing-color);
   transition: color .5s, background-color .5s;
 }
 
 #btn-stop:hover {
   color: var(--relaxing-color);
-  background-color: white;
+  background-color: var(--back-color);
 }
 
 #btn-stop {
@@ -174,7 +177,8 @@ html, body {
   padding: 0.8rem;
   font-size: 0.6rem;
   text-align: left;
-  background-color: #f8f7fff0;
+  background-color: var(--back-color);
+  opacity: 0.85;
   border: solid 2px;
   border-radius: 20px;
 }
